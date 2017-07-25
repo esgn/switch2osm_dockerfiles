@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>OSM Tile Server</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+<script type="text/javascript" src="leaflet/leaflet.js"></script>
+
+<div id="mapid" style="width: 600px; height: 400px;"></div>
+
+<script>
+		var mymap = L.map('mapid').setView(new L.LatLng(47.3667, 3.2783),15);
+
+	L.tileLayer('./osm_tiles/{z}/{x}/{y}.png', {
+		maxZoom: 18,
+		attribution: 'OpenStreetMap contributors',
+		id: 'OSM'
+	}).addTo(mymap);
+
+</script>
+</body>
+</html>
