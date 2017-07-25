@@ -33,6 +33,7 @@ RUN /etc/init.d/postgresql start &&\
 WORKDIR /home/osm
 USER osm
 COPY startup.sh /home/osm
+COPY shutdown.sh /home/osm
 COPY index.html /var/www/html
 COPY leaflet/ /var/www/html/leaflet
 
