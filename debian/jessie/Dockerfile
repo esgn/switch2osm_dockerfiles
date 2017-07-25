@@ -88,6 +88,10 @@ RUN sed -i 's/RUNASUSER=www-data/RUNASUSER=osm/' /etc/init.d/renderd
 RUN mkdir -p /var/lib/mod_tile
 RUN chown osm:osm /var/lib/mod_tile
 
+# CREATE RENDERD FOLDER (NECESSARY ?)
+RUN mkdir -p /var/run/renderd
+RUN chown osm:osm /var/run/renderd
+
 # EDIT APACHE CONFIGURATION
 RUN echo "LoadModule tile_module /usr/lib/apache2/modules/mod_tile.so" > /etc/apache2/mods-available/tile.load
 RUN sed -i '/<\/VirtualHost>/ i \
