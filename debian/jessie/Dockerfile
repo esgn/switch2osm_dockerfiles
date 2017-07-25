@@ -38,6 +38,7 @@ COPY index.html /var/www/html
 COPY leaflet/ /var/www/html/leaflet
 
 # IMPORT OSM EXTRACT TO DATABASE
+# ADJUST --number-processes corresponding to your machine CPU
 RUN wget https://github.com/gravitystorm/openstreetmap-carto/archive/v2.29.1.tar.gz
 RUN tar -xzf v2.29.1.tar.gz
 
