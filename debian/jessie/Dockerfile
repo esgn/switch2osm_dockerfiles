@@ -1,4 +1,4 @@
-
+# Tested with docker v1.12.6 on ubuntu 16.04.2
 FROM debian:jessie
 
 # Maintainer
